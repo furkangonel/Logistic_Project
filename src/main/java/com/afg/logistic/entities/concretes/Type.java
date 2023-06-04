@@ -2,6 +2,8 @@ package com.afg.logistic.entities.concretes;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -16,6 +18,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name="types")
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "vehicles"})
 
 public class Type {
 
@@ -32,7 +35,7 @@ public class Type {
 	@Column(name="loading")
 	private String loading;
 	
-	@OneToMany(mappedBy = "loads")
+	@OneToMany(mappedBy = "type")
 	private List<Vehicle> vehicles;
 	
 	
