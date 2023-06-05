@@ -1,6 +1,7 @@
 package com.afg.logistic.business.concretes;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.afg.logistic.business.abstracts.UserService;
 import com.afg.logistic.core.dataAccess.UserRepository;
@@ -10,8 +11,7 @@ import com.afg.logistic.core.utilities.results.Result;
 import com.afg.logistic.core.utilities.results.SuccessDataResult;
 import com.afg.logistic.core.utilities.results.SuccessResult;
 
-import net.bytebuddy.asm.Advice.This;
-
+@Service
 public class UserManager implements UserService{
 
 	private UserRepository userRepository;
