@@ -12,7 +12,10 @@ public interface VehicleService {
 	DataResult<List<Vehicle>> getAll();
 	DataResult<List<Vehicle>> getAllSorted();
 	DataResult<List<Vehicle>> getAll(int pageNo,int pageSize);
+	
 	Result add(Vehicle vehicle);
+		
+		
 	   
 	
 	DataResult<Vehicle> getByLoadName(String loadName);
@@ -30,5 +33,8 @@ public interface VehicleService {
 	DataResult<List<Vehicle>> getByNameAndType(String loadName, int typeId);
 	
 	DataResult<List<LoadWithTypeDto>> getLoadWithTypeDetails();
+	
+	
+	
 	
 }

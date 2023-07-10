@@ -25,7 +25,7 @@ public class Vehicle {
 		private int loadId;
 		
 		@Column(name="load_name")
-		private String loadName;
+		public String loadName;
 		
 		@Column(name="load_weight")
 		private double loadWeight;
@@ -38,6 +38,9 @@ public class Vehicle {
 		
 		@Column(name="price")
 		private double price;
+		
+		@Column(name = "advance_payment")
+		private double advancePayment;
 		
 		@ManyToOne()
 		@JoinColumn(name="type_id")

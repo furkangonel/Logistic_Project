@@ -30,4 +30,6 @@ public interface VehicleRepository extends JpaRepository<Vehicle, Integer>{
 	List<LoadWithTypeDto> getLoadWithTypeDetails();
 	
 	
+	
+	
 }
